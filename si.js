@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const TOKEN = 'YOUR_ACTUAL_BOT_TOKEN'; // استبدل بهذا بالتوكن الخاص بك
+const TOKEN = 'YOUR_ACTUAL_USER_TOKEN'; // استبدل بهذا بالتوكن الخاص بك
 
 const updateStatus = async () => {
     const url = 'https://discord.com/api/v10/users/@me/settings';
@@ -14,7 +14,7 @@ const updateStatus = async () => {
             }
         }, {
             headers: {
-                'Authorization': `Bot ${TOKEN}`, // تأكد من استخدام علامات الاقتباس المائلة
+                'Authorization': `Bearer ${TOKEN}`, // استخدم Bearer بدلاً من Bot
                 'Content-Type': 'application/json',
             },
         });
